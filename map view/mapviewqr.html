@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=670, user-scalable=no" />
+
+    <title>qr generator</title>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"
+    ></script>
+    <!-- navigation bar -->
+    <link rel="stylesheet" type="text/css" href="../source/nav.css" />
+    <link rel="stylesheet" type="text/css" href="../source/animatedbg.css" />
+    <!-- map view styles here -->
+    <link rel="stylesheet" type="text/css" href="mapviewqr.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- jquery -->
+    <!-- create qr code script here.... -->
+    <script src="../source/create-qr-script.js"></script>
+    <!-- nav bar -->
+    <div class="headerpage" id="headerpage"></div>
+    <!-- nav bar ending.... -->
+    <center>
+      <div class="content">
+        <h1 style="color: blueviolet">MAP VIEW qr code generator</h1>
+        <label for="name" style="color: green; font-weight: bolder">
+          ENTER YOUR ADDRESS</label
+        ><br />
+        <div style="display: flex; justify-content: center">
+          <input type="radio" id="search" name="mapurl" value="search" />
+          <label for="search">Search</label>
+          <input type="radio" id="direction" name="mapurl" value="direction" />
+          <label for="direction">Show direction</label>
+        </div>
+
+        <!-- <input type="text" id="location" placeholder="Enter your location here...." > -->
+        <textarea
+          id="location"
+          placeholder="Enter your location here...."
+          rows="4"
+          maxlength="500"
+        ></textarea>
+
+        <br />
+        <span id="urlshow"></span>
+        <input type="button" id="generatebtn" value="Generate QR Code" />
+        <br />
+        <div>
+          <span
+            id="generatesucc"
+            style="
+              display: none;
+              background-color: #ddffdd;
+              margin: 4px;
+              padding: 6px;
+              border-left: 6px solid #04aa6d;
+            "
+            >QR code generated successfully...</span
+          >
+          <span
+            id="downloadsucc"
+            style="
+              display: none;
+              background-color: #ddffdd;
+              margin: 4px;
+              padding: 6px;
+              border-left: 6px solid #04aa6d;
+            "
+            >QR code download successfully...</span
+          >
+          <div id="loader" style="display: none"></div>
+          <div
+            id="qr-code"
+            style="
+              border-radius: 25px;
+              display: none;
+              background-color: white;
+              padding: 10px;
+              margin: 0;
+            "
+            width="200"
+            height="200"
+          ></div>
+        </div>
+        <br />
+        <a id="dwnld" style="display: none">Download QR</a>
+
+        <button onclick="history.back()">Back</button>
+      </div>
+    </center>
+    <!-- //Code for download qrCode here... -->
+    <script type="text/javascript" src="mapviewqr.js"></script>
+
+    <!-- this html code for animated background -->
+    <div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+    </div>
+    <!-- this html code for animated background -->
+  </body>
+  <!-- <footer>
+        <p>© 2023 QRcode generator. All rights reserved.</p>
+    </footer> -->
+  <!-- Site footer -->
+  <footer class="site-footer" id="footer">
+    <script src="../source/general.js"></script>
+  </footer>
+  <p></p>
+</html>

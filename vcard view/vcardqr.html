@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=670, user-scalable=no" />
+
+    <title>qr generator</title>
+    <link rel="stylesheet" type="text/css" href="vcard.css" />
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"
+    ></script>
+
+    <link rel="stylesheet" type="text/css" href="../source/nav.css" />
+    <link rel="stylesheet" type="text/css" href="../source/animatedbg.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- jquery -->
+    <!-- create qr code script here.... -->
+    <script src="../source/create-qr-script.js"></script>
+    <!-- nav bar -->
+    <div class="headerpage" id="headerpage"></div>
+
+    <!-- nav bar ending.... -->
+    <center>
+      <div class="phnocontent">
+        <h1 style="color: blueviolet">VCard qr code generator</h1>
+        <label for="name"> NAME</label
+        ><input
+          type="text"
+          id="name"
+          oninput="invalidname()"
+          name="phno"
+          id="phno"
+          placeholder="Enter Name"
+          autofocus
+        />
+        <span id="nameerror" style="font-weight: bolder; font-size: 20px"></span
+        ><br />
+
+        <label for="phno"> MOBILE NO.</label
+        ><input
+          type="number"
+          id="phno"
+          oninput="invalidphno()"
+          name="phno"
+          id="phno"
+          placeholder="Enter mobile no"
+        />
+        <span id="phnoerror" style="font-weight: bolder; font-size: 20px"></span
+        ><br />
+
+        <br />
+        <input type="button" id="generatebtn" value="Generate QR Code" />
+        <br />
+        <br />
+
+        <div>
+          <span
+            id="generatesucc"
+            style="
+              display: none;
+              background-color: #ddffdd;
+              margin: 4px;
+              padding: 6px;
+              border-left: 6px solid #04aa6d;
+            "
+            >QR code generated successfully...</span
+          >
+          <span
+            id="downloadsucc"
+            style="
+              display: none;
+              background-color: #ddffdd;
+              margin: 4px;
+              padding: 6px;
+              border-left: 6px solid #04aa6d;
+            "
+            >QR code download successfully...</span
+          >
+          <div id="loader" style="display: none"></div>
+          <div
+            id="qr-code"
+            style="
+              border-radius: 25px;
+              display: none;
+              background-color: white;
+              padding: 10px;
+              margin: 0;
+            "
+            width="200"
+            height="200"
+          ></div>
+        </div>
+        <br />
+        <a id="dwnld" style="display: none">Download QR</a>
+        <!-- <button id="dwnldpdf" style="display:none;" onclick="saveDiv('qr-code','Title')">Download QR PDF</button> -->
+
+        <button onclick="history.back()">Back</button>
+      </div>
+    </center>
+    <!-- //Code for download qrCode here... -->
+    <script type="text/javascript" src="vcard.js"></script>
+
+    <!-- this html code for animated background -->
+    <div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+    </div>
+    <!-- this html code for animated background -->
+  </body>
+  <!-- <footer>
+        <p>© 2023 QRcode generator. All rights reserved.</p>
+    </footer> -->
+  <!-- Site footer -->
+  <footer class="site-footer" id="footer">
+    <script src="../source/general.js"></script>
+  </footer>
+</html>

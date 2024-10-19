@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=670, user-scalable=no" />
+
+    <title>qr generator</title>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"
+    ></script>
+    <!-- whatsapp view styles here... -->
+    <link rel="stylesheet" type="text/css" href="whatsappview.css" />
+    <!-- nav bar -->
+    <link rel="stylesheet" type="text/css" href="../source/nav.css" />
+    <!-- animated background -->
+    <link rel="stylesheet" type="text/css" href="../source/animatedbg.css" />
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- jquery -->
+    <!-- create qr code script here.... -->
+    <script src="../source/create-qr-script.js"></script>
+    <!-- nav bar -->
+    <div class="headerpage" id="headerpage"></div>
+
+    <!-- nav bar ending.... -->
+    <center>
+      <div class="whatsappcontent">
+        <h1 style="color: blueviolet">whats app qr code generator</h1>
+        <label for="phno"> MOBILE NO.</label
+        ><input
+          type="number"
+          oninput="invalid()"
+          name="phno"
+          class="input_field"
+          id="phno"
+          placeholder="Enter mobile no."
+        />
+        <span id="error" style="font-weight: bolder; font-size: 20px"></span
+        ><br />
+        <label for="message">MESSAGE(OPTIONAL)</label
+        ><textarea
+          id="message"
+          placeholder="Type message here...(optional)"
+          cols="5"
+          rows="3"
+        ></textarea
+        ><br />
+        <br />
+        <input type="button" id="generatebtn" value="Generate QR Code" />
+        <br />
+        <br />
+        <span id="urlshow"></span>
+        <br />
+        <div>
+          <span
+            id="generatesucc"
+            style="
+              display: none;
+              background-color: #ddffdd;
+              margin: 4px;
+              padding: 6px;
+              border-left: 6px solid #04aa6d;
+            "
+            >QR code generated successfully...</span
+          >
+          <!-- <span id="downloadsucc" style="display:none;background-color: #ddffdd;margin:4px;padding:6px;border-left: 6px solid #04AA6D;">QR code download successfully...</span> -->
+          <div id="loader" style="display: none"></div>
+
+          <!-- qr code container div -->
+          <div
+            id="qr-code"
+            style="
+              border-radius: 25px;
+              display: none;
+              background-color: white;
+              padding: 10px;
+              margin: 0;
+            "
+            width="200"
+            height="200"
+          ></div>
+          <!-- qr code container div -->
+          <br />
+          <a id="dwnld" style="display: none">Download QR</a>
+        </div>
+
+        <button onclick="history.back()">Back</button>
+      </div>
+    </center>
+    <!-- //Code for download qrCode here... -->
+    <script type="text/javascript" src="whatsappview.js"></script>
+
+    <!-- this html code for animated background -->
+    <div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+    </div>
+    <!-- this html code for animated background -->
+  </body>
+  <!-- <footer>
+        <p>© 2023 QRcode generator. All rights reserved.</p>
+    </footer> -->
+  <!-- Site footer -->
+  <footer class="site-footer" id="footer">
+    <script src="../source/general.js"></script>
+  </footer>
+</html>

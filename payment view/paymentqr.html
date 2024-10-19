@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=970, user-scalable=no">
+	<title>QR Code Generator</title>
+	<!-- nav bar -->
+<link rel="stylesheet" type="text/css" href="../source/nav.css">
+<!-- animated background -->
+	 <link rel="stylesheet" type="text/css" href="../source/animatedbg.css">
+<!-- payment view css externel file link here... -->
+	<link rel="stylesheet" type="text/css" href="paymentqr.css">
+	<!-- jquery -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<!-- jquery -->
+
+</head>
+
+<body onautocomplete="on">
+	<!-- javascript external file link here... -->
+    <script type="text/javascript" src="paymentqr.js"></script>
+	
+<!-- create qr code script here.... -->
+	<script src="/source/create-qr-script.js"></script>
+	<!-- nav bar -->
+    <div class="headerpage" id="headerpage"></div>
+
+<!-- nav bar ending.... -->
+	
+	<center >
+		<div class="content">
+			<h1 style="color:blueviolet;">PAYMENT qr code generator</h1>
+
+		<span id="error" style="color: darkred;"></span>
+			<label for="upiid">UPI ID</label><input type="text" id="upiid" placeholder="Enter UPI ID" minlength="5" oninput="invalid()" /><br>
+			<label for="upi_name">UPI NAME</label><input type="text" maxlength="30" id="upi_name"  placeholder="Enter UPI name" oninput="invalid()" /><br>
+			<label for="upi_mess">MESSAGE</label><input type="text" maxlength="40" id="upi_mess"  placeholder="Enter message"  oninput="invalid()" /><br>
+			<label for="amount">AMOUNT</label>
+			<input type="number" maxlength="5" id="amount" placeholder="Enter amount" oninput="invalid()"/><br>
+			<br>
+			<input type="button" id="generatebtn"value="Generate QR Code"  />
+		<br>
+		<br>
+		<div>
+        <span id="generatesucc" style="display:none;background-color: #ddffdd;margin:4px;padding:6px;border-left: 6px solid #04AA6D;">QR code generated successfully...</span>
+        <!-- <span id="downloadsucc" style="display:none;background-color: #ddffdd;margin:4px;padding:6px;border-left: 6px solid #04AA6D;">QR code download successfully...</span> -->
+        <div id="loader" style="display:none;"></div>
+        
+        <!-- qr code container div -->
+        <div id="qr-code"  style="border-radius:25px; display:none;background-color: white; padding:10px;margin:0" width="200" height="200"></div>
+        <!-- qr code container div -->
+               <br>
+		<a id="dwnld" style="display:none;">Download QR</a>
+	 
+        
+</div>
+
+<button onclick="history.back()">Back</button>
+	</center>
+	
+<!-- this html code for animated background -->
+ <div>
+     <div class="wave"></div>
+     <div class="wave"></div>
+     <div class="wave"></div>
+ </div>
+<!-- this html code for animated background -->
+</body>
+<!-- <footer>
+        <p>© 2023 QRcode generator. All rights reserved.</p>
+    </footer>
+ -->
+  <!-- Site footer -->
+  <footer class="site-footer" id="footer">
+    <script src="../source/general.js"></script>
+  </footer>
+  </html>

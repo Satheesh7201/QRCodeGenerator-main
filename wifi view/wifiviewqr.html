@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WiFi QR Code Generator</title>
+    <meta name="viewport" content="width=970, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="wifiviewqr.css" />
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"
+    ></script>
+
+    <link rel="stylesheet" type="text/css" href="../source/nav.css" />
+    <link rel="stylesheet" type="text/css" href="../source/animatedbg.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- jquery -->
+    <!-- create qr code script here.... -->
+    <script src="../source/create-qr-script.js"></script>
+    <!-- nav bar -->
+    <div class="headerpage" id="headerpage"></div>
+    <div class="headerpage" id="headerpage"></div>
+
+    <!-- nav bar ending.... -->
+    <center>
+      <div class="content">
+        <h1 style="color: blueviolet">WiFi QR Code Generator</h1>
+        <label for="ssid">SSID:</label>
+        <input
+          type="text"
+          id="ssid"
+          name="ssid"
+          placeholder="Enter ssid"
+          required
+        /><br /><br />
+        <label for="password">Password:</label>
+        <input
+          type="text"
+          id="password"
+          name="password"
+          placeholder="********"
+        /><br /><br />
+        <label for="security">Security:</label>
+        <select id="security" name="security">
+          <option value="WEP">WEP</option>
+          <option value="WPA">WPA</option>
+          <option value="WPA2" selected>WPA2</option>
+          <option value="None">None</option></select
+        ><br />
+        <input type="button" id="generatebtn" value="Generate QR Code" />
+        <div>
+          <span
+            id="generatesucc"
+            style="
+              display: none;
+              background-color: #ddffdd;
+              margin: 4px;
+              padding: 6px;
+              border-left: 6px solid #04aa6d;
+            "
+            >QR code generated successfully...</span
+          >
+          <span
+            id="downloadsucc"
+            style="
+              display: none;
+              background-color: #ddffdd;
+              margin: 4px;
+              padding: 6px;
+              border-left: 6px solid #04aa6d;
+            "
+            >QR code download successfully...</span
+          >
+          <div id="loader" style="display: none"></div>
+          <div
+            id="qr-code"
+            style="
+              border-radius: 25px;
+              display: none;
+              background-color: white;
+              padding: 10px;
+              margin: 0;
+            "
+            width="200"
+            height="200"
+          ></div>
+        </div>
+        <br />
+        <a id="dwnld" style="display: none">Download QR</a>
+
+        <button onclick="history.back()">Back</button>
+      </div>
+    </center>
+    <!-- this html code for animated background -->
+    <div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+    </div>
+    <!-- this html code for animated background -->
+    <script type="text/javascript" src="wifiviewqr.js"></script>
+  </body>
+  <!-- <footer>
+        <p>© 2023 QRcode generator. All rights reserved.</p>
+    </footer> -->
+  <!-- Site footer -->
+  <footer class="site-footer" id="footer">
+    <script src="../source/general.js"></script>
+  </footer>
+</html>
